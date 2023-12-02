@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+
+<body>
+    <script>
+        var data = [45, 55, 67, 89, 4410, 67, 23, 45, 1, 67, 88, 90, 1000, 44];
+
+        // Assending Order
+        // var temp;
+        // for (var j = 0; j < data.length; j++) {
+        //     for (var i = j + 1; i < data.length; i++) {
+        //         if (data[j] > data[i]) {
+        //             temp = data[j];
+        //             data[j] = data[i];
+        //             data[i] = temp;
+        //         }
+        //     }
+        // }
+
+        //Decending Order
+        var temp;
+        for (var j = 0; j < data.length; j++) {
+            for (var i = j + 1; i < data.length; i++) {
+                if (data[j] < data[i]) {
+                    temp = data[j];
+                    data[j] = data[i];
+                    data[i] = temp;
+                }
+            }
+        }
+        console.log(data);
+
+    </script>
+</body>
+
+</html>

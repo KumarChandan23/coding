@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <script>
+        //  😎❤️❤️😎 Largest Number of an array element
+
+        // let student = [98,89,67,8,19,92];
+        // let largest = student[0];
+        // for(let i = 0; i < student.length; i++){
+        //     if( student[i] > largest){
+        //         largest = student[i];
+        //     }
+        // }
+        // console.log("Largest number of  Array Element:",largest)
+
+
+        // 😎❤️❤️😎 Second Largest Number of an array element
+        var number = [34, 122, 1, 2, 3, 44, 245, 66, 177, 4, 44, 23, 55];
+
+        var largest = number[0];
+        var seconLargest = 0;
+
+        for (var i = 1; i < number.length; i++) {
+            if (number[i] > largest) {
+                seconLargest = largest;
+                largest = number[i];
+            } else if (number[i] > seconLargest) {
+                seconLargest = number[i];
+            }
+        }
+
+        console.log("largest is " + largest)
+        console.log("seconLargest is " + seconLargest)
+
+
+    </script>
+</body>
+
+</html>

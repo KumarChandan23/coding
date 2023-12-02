@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <script>
+
+        //  😎😎😎❤️❤️😎😎😎 Smallest Number
+
+        // let student = [98,89,67,8,19,92];
+        // let smallest = student[0];
+        // for(let i = 0; i < student.length; i++){
+        //     if( student[i] < smallest){
+        //     smallest = student[i];
+        //     }
+        // }
+        // console.log("Smallest number of  Array Element:",smallest)
+
+
+        
+        // 😎❤️❤️😎 Second Smallest Number of an array element
+        var number = [34, 122, 1, 2, 3, 44, 245, 66, 177, 4, 44, 23, 55];
+
+        var smallest = number[0];
+        var seconSmallest = 0;
+
+        for (var i = 1; i < number.length; i++) {
+            if (number[i] < smallest) {
+                seconSmallest = smallest;
+                smallest = number[i];
+            } else if (number[i] < seconSmallest) {
+                seconSmallest = number[i];
+            }
+        }
+
+        console.log("Smallest Number is " + smallest)
+        console.log("SecondSmallest Number is " + seconSmallest)
+
+
+    </script>
+</body>
+
+</html>
