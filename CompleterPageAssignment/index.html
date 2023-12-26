@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="RatingLib/rating.css">
+    <script src="RatingLib/rating.js"></script>
+    <script src="jQuery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="header">
+        <img src="https://i.pinimg.com/736x/0e/7d/19/0e7d19a04dd482e56a436e69854943e2.jpg" alt=""
+            class="logo headerpart">
+        <span class="headerpart" id="headertext">Womens shoes</span>
+        <span id="headerprice" class="headerpart"><sup>₹</sup>1,025 <sup>00</sup></span>
+        <span class=" headprime headerpart"><span id="checked">✓</span>prime</span>
+        <span id="save" class="headerpart">Save ₹50 </span> <span id="coupon" class="headerpart">with coupon</span>
+        <span class="headerpart"> <img
+                src="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/619wz6QlG5L._SY695_.jpg" alt=""
+                id="headerShoes"></span>
+    </div>
+    <span id="flileLocation">shoes & Handbag > Shoes > Women's > Causal Shoes > sneakers</span>
+    <div id="container">
+        <img id="productImage"
+            src="https://m.media-amazon.com/images/W/MEDIAX_792452-T2/images/I/71JUUReQ+GL._SX695_.jpg" alt=""
+            class="image">
+        <div id="button1" onmousemove="showImage1()" class="imagebutton"></div>
+        <div id="button2" onmousemove="showImage2()" class="imagebutton"></div>
+        <div id="button3" onmousemove="showImage3()" class="imagebutton"></div>
+        <div id="button4" onmousemove="showImage4()" class="imagebutton"></div>
+        <div id="button5" onmousemove="showImage5()" class="imagebutton"></div>
+
+
+    </div>
+
+
+    <div class="container">
+        <ul class="porductDetails"></ul>
+    </div>
+    <div class="productTemplate">
+                <li class="smallBlueContent">{{visite}}</li>
+                <li>{{name}}</li>
+                <li id="ratingStars_{{index}}"></li>
+                <li>
+                    <span class="anazonchoice">{{amazon}}<span class="choice">choice </span></span>
+
+                    <span class="nocolor">for "<span class="smallBlueContent">puma women shoe</span>" </span>
+                </li>
+                <br>
+                <hr>
+                <br>
+                <li class="deal">{{deal}}</li>
+                <li>
+                    <span class="dispcountedPrice"><span class="percentage">-9% </span> <sup>₹</sup>{{discountedPrice}} </span>
+                </li>
+                <li class="smallwithnocolor"> MRP: <span class="baseprice">₹{{basePrice}}</span> </li>
+                <li> <span class="smallwithnocolor">{{inclusive}}</span> </li>
+                <li> <span class="smallwithnocolor">{{emi}}</span>
+                    <span class="emi smallwithnocolor">EMi Option</span>
+                </li>
+                <hr>
+                <li>
+                    <img src="image/symbol1.png" class="symbol" alt=""> Offerse
+                    <div class="MainOffersContainer">
+                        <div class="offercontent">
+                            <div>{{bankOffer}}</div>
+                            <div class="smallwithnocolor">{{upto}}</div>
+                            <div class="smallwithnocolor">{{discount}}</div>
+                            <div class="smallwithnocolor">{{credit}}</div>
+                            <div class="smallwithnocolor smallBlueContent">{{extraoffers}}</div>
+                        </div>
+
+                        <div class="offercontent">
+                            <div>{{noCostEmi}}</div>
+                            <div class="smallwithnocolor">{{upto1}}</div>
+                            <div class="smallwithnocolor">{{interest}}</div>
+                            <div class="smallwithnocolor">{{payICICI}}</div>
+                            <div class="smallwithnocolor smallBlueContent">{{extraoffers1}}</div>
+                        </div>
+                    </div>
+                </li>
+                <hr>
+                <li>
+                    <div class="MainOffersContainer">
+                        <div class="offercontent1">
+                            <img src="image/freeDelivery.png" class="symbol1" alt=""> 
+                            <div class="smallwithnocolor">{{free}}</div>
+                        </div>
+                        <div class="offercontent1">
+                            <img src="image/exchange.png" class="symbol1" alt=""> 
+                            <div class="smallwithnocolor">{{return}}</div>
+                        </div>
+                        <!-- <div class="offercontent">
+                            <img src="symbol1.png" class="symbol1" alt=""> 
+                            <div class="smallwithnocolor">{{payondelivery}}</div>
+                        </div>
+                        <div class="offercontent">
+                            <img src="symbol1.png" class="symbol1" alt=""> 
+                            <div class="smallwithnocolor">{{bonus}}</div>
+                        </div> -->
+
+                       
+                    </div>
+                </li>
+                
+                <div id="secondbox">
+                   <li> <span class="dispcountedPrice"><sup>₹</sup>{{discountedPrice}}<sup>00 </sup></span></li>
+                   <li> <span class="smallBlueContent">{{free1}}<span class="day">Wednesday, 20 December. </span> {{details}}</span> </li>
+                   <li> {{faster}}<span class="time"> hrs 51 mins.</span> <span class="smallBlueContent">{{details}}</span> </li>
+                   <li>  <img src="https://img.freepik.com/premium-vector/pin-point-icon-with-red-map-location-pointer-symbol-isolated-white-background_120819-234.jpg" class="symbol" alt=""><span class="smallBlueContent">{{location1}}<span class="time"> hrs 51 mins.</span> {{details}}</span> </li>
+                    <li class="stock">{{stck}}</li>
+                    <li class="smallBlueContent"> <span class="day">Sold by</span>{{retailer}} <span class="day"> and </span> {{sold}}</li>
+                    <li>
+                        <span class="day">{{show}}</span>
+                        <span>{{showItem}}</span>
+                    </li>
+                    <li>Quantity:
+                        <select id="">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </li>
+                    <li><input type="button" value="Add to Cart" class="button" id="firstbutton"></li>
+                    <li><input type="button" value="By Now" class="button" id="secondbutton"></li>
+                    <li class="smallBlueContent">{{secure}}</li>
+                    <li><input type="checkbox"> <span>{{checkbox}}</span></li>
+                    <hr>
+                    <li><input type="text" placeholder="Add to Wish list"></li>
+                </div>
+            </div>
+
+    
+    <script src="script.js"></script>
+</body>
+
+</html>
