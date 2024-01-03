@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Rating</title>
+  <style>
+   body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .star-rating {
+    font-size: 0;
+  }
+
+  .star {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+
+  .star::before {
+    content: '\2605'; /* Unicode character for a star */
+    font-size: 24px;  /* Adjust the font size to change the star size */
+    /* color: transparent; */
+    color:green;
+    position: absolute;
+  }
+
+  .star.filled::before {
+    color: rgb(180, 47, 47); /* Color for filled star */
+  }
+  </style>
+</head>
+<body>
+  <div class="star-rating" data-rating="4">
+    <span class="star" data-value="1"></span>
+    <span class="star" data-value="2"></span>
+    <span class="star" data-value="3"></span>
+    <span class="star" data-value="4"></span>
+    <span class="star" data-value="5"></span>
+    </div>
+
+  <script>
+   
+
+document.addEventListener('DOMContentLoaded', function () {
+  const stars = document.querySelectorAll('.star');
+  const initialRating = parseInt(document.querySelector('.star-rating').dataset.rating);
+
+  stars.forEach(star => {
+    const starValue = parseInt(star.dataset.value);
+    star.classList.toggle('filled', starValue <= initialRating);
+  });
+});
+
+    
+  </script>
+</body>
+</html>
