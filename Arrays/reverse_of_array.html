@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse of array</title>
+</head>
+<body>
+    <script>
+        // var reverse = numberString.split("").reverse().join("");
+        // console.log(reverse);
+
+        var number = 3431;
+        var rem;
+        var rev="";
+        while(number > 0){
+            rem = number % 10; 
+            rev = rev + rem;
+            number = number / 10;
+            number = parseInt(number);
+        }
+        console.log(rev);
+    </script>
+</body>
+</html>

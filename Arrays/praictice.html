@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+            // factorial of a number 
+        // var n = 5; 
+        // var f = 1; 
+        // for(let i  = 1; i <= n; i++){
+        //     f = f * i;
+
+        // }
+        // console.log(f)
+
+        let numbers = [11,2,6,10];
+        let factorials = [];
+        
+        for (let i = 0; i < numbers.length; i++) {
+            var factorialResult = 1;
+            let number = numbers[i];
+
+            for (let j = 1; j <= number; j++) {
+                factorialResult *= j;
+            }
+
+            factorials.push(factorialResult);
+            // console.log("Factorials:", factorialResult);
+        }
+
+        console.log("Factorials:", factorials);
+
+    </script>
+</body>
+
+</html>

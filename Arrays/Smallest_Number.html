@@ -24,16 +24,17 @@
 
         
         // 😎❤️❤️😎 Second Smallest Number of an array element
-        var number = [34, 122, 1, 2, 3, 44, 245, 66, 177, 4, 44, 23, 55];
+        var number = [34, 44];
+        // var number = [34, 122, 56, 2, 36, 44, 245, 66, 177, 40, 44, 23, 55];
 
         var smallest = number[0];
         var seconSmallest = 0;
 
-        for (var i = 1; i < number.length; i++) {
+        for (var i = 0; i < number.length; i++) {
             if (number[i] < smallest) {
                 seconSmallest = smallest;
                 smallest = number[i];
-            } else if (number[i] < seconSmallest) {
+            } else if (number[i] < seconSmallest && number[i] !== smallest) {
                 seconSmallest = number[i];
             }
         }
