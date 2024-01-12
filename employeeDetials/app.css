@@ -1,0 +1,94 @@
+.container {
+    margin: auto;
+    border: 2px solid;
+    height: 590px;
+    width: 600px;
+    padding: 10px;
+}
+
+li {
+    list-style: none;
+    margin: 20px;
+}
+
+#mainForm {
+    margin: auto;
+}
+
+.qualificationUl {
+    padding: 0px;
+}
+
+#accountId,
+#passwordLabel,
+#repeatPasswordLabel {
+    font-size: 22px;
+}
+
+#acctIdInput,
+#passwordInput,
+#repeatPasswordInput {
+    font-size: 26px;
+}
+
+#button {
+    font-size: 20px;
+    width: 120px;
+}
+
+#showPassword,
+#showConfirmPassword {
+    height: 30px;
+    width: 30px;
+    position: relative;
+    top: 6px;
+}
+
+#notMatching {
+    height: 25px;
+    width: 25px;
+    position: relative;
+    bottom: 5px;
+}
+
+p {
+    margin: 5px;
+}
+
+
+#notMatching,
+#matchingText {
+    float: left;
+}
+
+#liDiv {
+    clear: both;
+    margin: 5px;
+}
+
+.button {
+    margin: 10px;
+    padding-left: 80px;
+    margin-top: 20px;
+    position: absolute;
+}
+
+#matchingText {
+    font-size: 18px;
+}
+
+    /* .matchText {
+        color: red;
+    } */
+
+.qText {
+    color: red;
+}
+
+.matchPassword {
+    display: none;
+}
+
+.matchPasswordImg {
+    display: none;
+}

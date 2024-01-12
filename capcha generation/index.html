@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript CAPTCHA Example</title>
+  <style>
+    /* Add some basic styling for better presentation */
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h1>JavaScript CAPTCHA Example</h1>
+
+  <div id="captcha-container"></div>
+  <input type="text" id="captcha-input" placeholder="Enter CAPTCHA">
+  <button onclick="validateCaptcha()">Submit</button>
+  <button onclick="generateCaptcha()">Refresh CAPTCHA</button>
+
+  <script>
+    // Function to generate a random alphanumeric string
+    function generateRandomString(length) {
+      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      let result = '';
+      for (let i = 0; i < length; i++) {
+        result += characters.charAt(Math.floor(Math.random() * characters.length));
+      }
+      return result;
+    }
+
+    // Function to create and display the CAPTCHA
+    function generateCaptcha() {
+      const captchaContainer = document.getElementById('captcha-container');
+      const captchaValue = generateRandomString(8); // You can adjust the length of the CAPTCHA
+      captchaContainer.textContent = captchaValue;
+    }
+
+    // Function to validate the entered CAPTCHA
+    function validateCaptcha() {
+      const captchaInput = document.getElementById('captcha-input');
+      const captchaContainer = document.getElementById('captcha-container');
+      const enteredValue = captchaInput.value;
+      const correctValue = captchaContainer.textContent;
+
+      if (enteredValue === correctValue) {
+        alert('CAPTCHA is correct!');
+        // You can add additional logic here, such as submitting a form
+      } else {
+        alert('CAPTCHA is incorrect. Please try again.');
+        // You can add additional logic here, such as refreshing the CAPTCHA
+        generateCaptcha();
+        captchaInput.value = '';
+      }
+    }
+
+    // Generate the initial CAPTCHA on page load
+    window.onload = generateCaptcha;
+  </script>
+</body>
+</html>
