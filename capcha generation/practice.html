@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="captchaContainer"></div>
+    <div class="captcha" onclick="generateCaptcha(10)">captcha</div>
+    
+    <script defer>
+        var generateCaptcha = (length) => {
+            var characters = '23iofjsdkli&%#@';
+            var captcha = '';
+            
+            for (let i = 0; i < length; i++) {
+                captcha += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+
+            document.querySelector(".captchaContainer").innerText = captcha;
+          
+            console.log(captcha);
+            return captcha;
+        }
+
+        generateCaptcha(); // Call the function directly without waiting for onload
+    </script>
+</body>
+</html>

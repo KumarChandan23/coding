@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Array of strings
+        var str1 = ['chandan', 'kumar', 'mohan', 'kumar', 'kumar', 'rahul', 'mohan'];
+
+        // String to search for
+        var match = 'mohan';
+        var found = false;
+        var count = 0;
+
+        // Loop through the array
+        for (let i = 0; i < str1.length; i++) {
+            // Convert both the search string and the array element to lowercase and remove whitespaces
+            var normalizedMatch = match.replace(/\s/g, '');
+            var normalizedElement = str1[i].replace(/\s/g, '');
+
+            // Check if the normalized current element is equal to the normalized search string
+            if (normalizedMatch === normalizedElement) {
+                found = true;
+                count++;
+            }
+        }
+
+        // Output results
+        if (found) {
+            console.log("yes, found:", found);
+            console.log("Count:", count);
+        } else {
+            console.log("no, not found",found);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+
+
+ul{
+    list-style: none;
+}
+.error{
+    display:none;
+}
+#displayblock{
+    display:none;
+}

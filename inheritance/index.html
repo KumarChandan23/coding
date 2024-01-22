@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li>
+                <input type="text" placeholder="enter the name" id="sName">
+                <div class="error" id="nameError">*</div>
+            </li>
+            <li>
+                <input type="number" name="number" id="Mnumber">
+                <div class="error" id="MnumberError">*</div>
+            </li>
+            <li>
+                <input type="submit" name="" onclick="generateStudentReport()">
+            </li>
+        </ul>
+    </div>
+    <div class="displayBlock">
+        Name <div id="dName"></div>
+        Number <div id="dMnumber"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

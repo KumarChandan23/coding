@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 😎❤️❤️😎❤️❤️😎note the method does not modify the original array , it returns the new array
+
+        var arr = [829, 89, 678, 898];
+        console.log(arr) // orginal array
+        console.log(arr.length) // orginal array
+
+        console.log(arr.push(2)) // only add the value adn dispaly the length
+        arr.push(2, 3) // adding element from the right side of the arrray element
+        console.log(arr) // display the new array
+        arr.unshift(90) // this will add the element from the left side of the array element
+        console.log(arr)
+
+        arr.pop()// delete the element from the right side of the array element
+        console.log(arr)
+        arr.shift() // this will delete the element from the left side of the arrry element
+        console.log(arr) 
+
+        arr.splice(2,3,'g'); // the Splice method is the father of shift , unshift, pop and push, using them we can perform action only with on element but using spice method we perform multipe actions like delet more than 1 element and add multiple element. 
+        console.log(arr)
+
+        var arr2 = [47382,823940,263] 
+        var arr3 = [473,82,2]
+        var result = arr.concat(arr2,arr3) // it is used to join the more than 1 array and we can add n number arrays
+        console.log(result)
+
+        var srr = [ 'name', "chandan" , "kumar"];
+        var check = srr.includes('kumar8')
+        if(check){
+            console.log(check)
+        }else {
+            console.log(check )
+
+        }
+    </script>
+</body>
+
+</html>
