@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // // basic  to print some thing on the console
+        // function getName(){
+        //     console.log("kumar Chandan");
+        // }
+        // getName()
+        // //    to find the sum of the number 
+        //     function calculateSum(num1 = 1 , num2 = 1){ // function defination parameter
+        //         // var result = num1 + num2;
+        //         // return result;
+        //         if(!num1 || !num2){
+        //             console.log("plese enter the number");
+        //             return
+        //         }
+
+        //             return result = num1 + num2;
+
+        //     }
+
+        //    var result =  console.log(calculateSum(2,4));  //function colling argument 
+        //    console.log("Rsult: " + result) 
+
+        //    var result =  calculateSum(2);  //function colling argument 
+        // console.log(calculateSum(6))
+        //    console.log("Rsult: " + result)
+
+        function calculateCartPrice(num1 , num2, ...num3){
+            // "..." is colled the rest operator  --> num1 will conatain all the value 
+            // first and second value will taken by num1 and num2 and the remaining are stroed in the num3
+            return num3
+        }
+        console.log(calculateCartPrice(32,234,23324,324,8767678,78686))
+    </script>
+</body>
+
+</html>
