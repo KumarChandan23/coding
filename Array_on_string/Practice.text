@@ -1,0 +1,29 @@
+Reverse a String:
+Write a function that takes a string as input and returns the string reversed. For example, if the input is "hello," the function should return "olleh."
+
+Check for Palindrome:
+Write a function to check if a given string is a palindrome. A palindrome is a word, phrase, number, or other sequences of characters that reads the same forward and backward.
+
+Count Vowels and Consonants:
+Create a function that takes a string as input and counts the number of vowels and consonants in the string.
+
+Find the Longest Word:
+Write a function that takes a sentence (string) as input and returns the longest word in the sentence. If there are multiple words with the same maximum length, return the first one encountered.
+
+Capitalize the First Letter of Each Word:
+Write a function that takes a sentence as input and returns the sentence with the first letter of each word capitalized.
+
+Remove Duplicates:
+Write a function that takes a string and removes duplicate characters, leaving only the first occurrence of each character.
+
+Check Anagrams:
+Write a function that takes two strings as input and determines if they are anagrams of each other (contain the same characters with the same frequency).
+
+Count Occurrences of a Substring:
+Write a function that takes a string and a substring as input and counts the number of occurrences of the substring in the string.
+
+String Compression:
+Implement a function to perform basic string compression using the counts of repeated characters. For example, the string "aabcccccaaa" would become "a2b1c5a3."
+
+Rotate String:
+Write a function that rotates the characters of a string to the left by a given number of positions. For example, if the input is "abcdef" and the rotation is 2, the output should be "cdefab."

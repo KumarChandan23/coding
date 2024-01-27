@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // function countVowels(str) {
+        //     const vowels = "aeiouAEIOU";
+        //     let vowelCount = 0;
+        //     let consonantCount = 0;
+
+        //     for (let i = 0; i < str.length; i++) {
+        //         // Check if the current character is a vowel
+        //         if (
+        //             str[i] === 'a' || str[i] === 'e' || str[i] === 'i' ||
+        //             str[i] === 'o' || str[i] === 'u' || str[i] === 'A' ||
+        //             str[i] === 'E' || str[i] === 'I' || str[i] === 'O' ||
+        //             str[i] === 'U'
+        //         ) {
+        //             vowelCount++;
+        //         }
+               
+        //     }
+
+        //     return vowelCount;
+        // }
+
+        // const myString = "Hello, World!";
+  
+        // const result = countVowels(myString);
+
+        // console.log("Number of vowels in the string: " + result);
+
+
+
+        function countVowels(str) {
+            const vowels = "aeiouAEIOU";
+          
+            let consonantCount = 0;
+
+            for (let i = 0; i < str.length; i++) {
+              
+                // Check if the current character is a Consonant
+                if (
+                    str[i] !== 'a' || str[i] !== 'e' || str[i] !== 'i' ||
+                    str[i] !== 'o' || str[i] !== 'u' || str[i] !== 'A' ||
+                    str[i] !== 'E' || str[i] !== 'I' || str[i] !== 'O' ||
+                    str[i] !== 'U'
+                ) {
+                    consonantCount++;
+                }
+            }
+
+            return consonantCount;
+        }
+
+        const myString = "Hello, World!";
+        const str1 = myString.repeat(/\s/g, '');
+        const result = countVowels(str1);
+
+        console.log("Number of vowels in the string: " + result);
+
+    </script>
+</body>
+
+</html>
