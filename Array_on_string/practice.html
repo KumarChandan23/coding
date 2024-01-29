@@ -13,13 +13,13 @@
         console.log("Original String => " + str)
 
         // Length of Sting using method 
-        var str1 = str.replace(/\s/g,'');
+        var str1 = str.replace(/\s/g, '');
         console.log("Length of the String => " + str1.length)
 
         // Length of the String without using Method 
         let count = 0;
-        for(let i = 0;str[i] !== undefined ; i++){
-            if(str[i] !== ' '){
+        for (let i = 0; str[i] !== undefined; i++) {
+            if (str[i] !== ' ') {
                 count++;
             }
         }
@@ -30,18 +30,28 @@
         console.log("Reverse of the String Using method => " + reverse)
 
         // Reverse Of the Sting witout using Method 
-        let reverseWM  = ""
-        for(let i = str.length - 1 ; i >= 0; i--){
+        let reverseWM = ""
+        for (let i = str.length - 1; i >= 0; i--) {
             reverseWM += str[i];
         }
-        console.log( "Reverse on  String without using Method => " + reverseWM)
+        console.log("Reverse on  String without using Method => " + reverseWM)
 
-        // console.log(name)
-        let name = "Rahul"
-        console.log(name)
-        name = "chandan kumar"
-        console.log(name)
-        </script>
+     
+
+
+        // // to get the total number of vowels 
+        // let kumar = "KumarA Verma";
+        // let vowel = 'aeiou';
+        // let vowelCount = 0;
+        // for(let i = 0; i< kumar.length; i++){
+        //     if(vowel.includes(kumar[i].toLocaleLowerCase())){
+        //         vowelCount++;
+        //     }
+        // }
+        // console.log(kumar)
+        // console.log(vowelCount)
+
+    </script>
 </body>
 
 </html>
