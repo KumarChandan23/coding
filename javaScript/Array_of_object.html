@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array of Objects</title>
+</head>
+<body>
+    <h2>Print Data in the form of Select Option</h2>
+    <select id="selectCandidate">
+        <!-- Options will be dynamically added here -->
+    </select>
+
+    <div id="candidateInfo">
+        <!-- Candidate information will be displayed here -->
+    </div>
+
+    <script>
+        var arrObj = {
+            candidate1: {
+                name: "Mohan Kumar Mishra",
+                age: '89',
+                gender: "Male",
+            },
+            candidate2: {
+                name: "Manish Kumar Sharma",
+                age: '34',
+                gender: "Male"
+            },
+            candidate3: {
+                name: "Rani Mukharji",
+                age: 50,
+                gender: "Female"
+            }
+        }
+
+        var selectElement = document.getElementById("selectCandidate");
+        var candidateInfoContainer = document.getElementById("candidateInfo");
+
+        // Populate the dropdown
+        for (var key in arrObj) {
+            if (arrObj.hasOwnProperty(key)) {
+                var optgroup = document.createElement('optgroup');
+                optgroup.label = key;
+
+                var option = document.createElement('option');
+                option.value = key;
+                option.textContent =` ${arrObj[key].name}, ${arrObj[key].gender} `;
+     
+                optgroup.appendChild(option);
+                selectElement.appendChild(optgroup);
+            }
+        }
+
+       
+    </script>
+</body>
+</html>

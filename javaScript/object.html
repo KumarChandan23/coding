@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+</head>
+
+<body>
+    <h2>Show Data in Dropdown</h2>
+    <select id="selectDate"></select>
+    <script>
+        var selectData = document.querySelector("#selectDate");
+        var obj = {
+            name:'Kumar',
+            age:"90",
+            gender:"Male",
+            qualification:"PHD"
+        }
+            for(var key in obj){
+                var option = document.createElement('option');
+                option.textContent = obj[key];
+                selectData.appendChild(option)
+            }
+
+        var myObject = {
+            name: "kumar",
+            age: 9,
+            city: "New York"
+        };
+
+        for (var key in myObject) {
+            if (myObject.hasOwnProperty(key)) {  // it will check the key is present or not
+                console.log(key + ": " + myObject[key]);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

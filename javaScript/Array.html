@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Binding</title>
+</head>
+<body>
+    <h2>Data Using Table</h2>
+ <table border="2" id="tableData"></table>
+ <h2>Data using Dropdown</h2>
+ <select  id="selectData"></select>
+ <script>
+    var array = [23,8432,798,789 , "Kumar"];
+    // Append Data into tabel 
+    var mainContainer = document.querySelector("#tableData");
+    for(let i = 0; i < array.length; i++){
+        var tableRow = document.createElement('tr');
+        var tableCell = document.createElement('td');
+        tableCell.textContent = array[i];
+        tableRow.appendChild(tableCell);
+        mainContainer.appendChild(tableRow);
+    }
+    // Append Data into Dropdown 
+    var dropdownDataCointainer = document.querySelector("#selectData");
+    for(let i = 0; i < array.length; i++){
+        var option = document.createElement('option');
+        option.textContent = array[i];
+        dropdownDataCointainer.appendChild(option)
+    }
+ </script>
+</body>
+</html>

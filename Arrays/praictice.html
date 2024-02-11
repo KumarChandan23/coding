@@ -4,37 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dynamic Dropdown</title>
 </head>
 
 <body>
+    <select id="numberOptions">
+        <!-- Options will be added dynamically using JavaScript -->
+    </select>
+
     <script>
-            // factorial of a number 
-        // var n = 5; 
-        // var f = 1; 
-        // for(let i  = 1; i <= n; i++){
-        //     f = f * i;
+        // Sample array of numbers
+        let numbersArray = [11, 2, 6, 10];
 
-        // }
-        // console.log(f)
+        // Get the select element by its ID
+        let selectElement = document.getElementById('numberOptions');
 
-        let numbers = [11,2,6,10];
-        let factorials = [];
-        
-        for (let i = 0; i < numbers.length; i++) {
-            var factorialResult = 1;
-            let number = numbers[i];
-
-            for (let j = 1; j <= number; j++) {
-                factorialResult *= j;
-            }
-
-            factorials.push(factorialResult);
-            // console.log("Factorials:", factorialResult);
+        // Loop through the numbers array to create and append options
+        for (let i = 0; i < numbersArray.length; i++) {
+            let optionElement = document.createElement('option');
+            optionElement.value = numbersArray[i];
+            optionElement.text = numbersArray[i];
+            selectElement.appendChild(optionElement);
         }
 
-        console.log("Factorials:", factorials);
-
+        // Log the array to the console
+        console.log("Numbers Array:", numbersArray);
     </script>
 </body>
 
